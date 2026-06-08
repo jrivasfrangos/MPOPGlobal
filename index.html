@@ -44,6 +44,8 @@ body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);min
 .section-sub{font-size:0.85rem;color:var(--text3);margin-bottom:1.5rem}
 .month-badge{display:inline-flex;align-items:center;gap:0.4rem;background:var(--mp-purple);color:#fff;border-radius:20px;padding:0.2rem 0.8rem;font-size:0.75rem;font-weight:600;margin-bottom:1rem}
 .month-badge.mes2{background:var(--mp-pink)}
+.month-badge.mes3{background:var(--success)}
+.month-badge.tri{background:var(--mp-purple-dark)}
 .kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:0.75rem;margin-bottom:1.5rem}
 .kpi-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem}
 .kpi-card.highlight{background:var(--mp-purple-bg);border-color:var(--border2)}
@@ -152,6 +154,8 @@ table{border-collapse:collapse}
   <div class="nav-item active" onclick="showPage('home',this)">Resumen General</div>
   <div class="nav-item" onclick="showPage('mes1',this)">Mes 1 — Marzo 2026</div>
   <div class="nav-item" onclick="showPage('mes2',this)">Mes 2 — Abril 2026</div>
+  <div class="nav-item" onclick="showPage('mes3',this)">Mes 3 — Mayo 2026</div>
+  <div class="nav-item" onclick="showPage('trimestre1',this)">Primer Trimestre</div>
   <div class="nav-item disabled">Trimestre 2</div>
   <div class="nav-item disabled">Trimestre 3</div>
 </div>
@@ -183,105 +187,53 @@ table{border-collapse:collapse}
   <button class="sec-btn" onclick="showSection('s2-vs',this,'mes2-subnav')"><span class="sec-label">Mes 1 vs Mes 2</span><span class="sec-desc">Comparativa de evolución</span></button>
 </div>
 
+<!-- SUB NAV MES 3 -->
+<div class="sub-nav" id="mes3-subnav">
+  <div class="sub-nav-label">Secciones del Mes 3 — Mayo 2026:</div>
+  <button class="sec-btn active" onclick="showSection('s3-overview',this,'mes3-subnav')"><span class="sec-label">Visión General</span><span class="sec-desc">Lectura estratégica</span></button>
+  <button class="sec-btn" onclick="showSection('s3-objetivos',this,'mes3-subnav')"><span class="sec-label">Objetivos SMART</span><span class="sec-desc">Estado acumulado</span></button>
+  <button class="sec-btn" onclick="showSection('s3-instagram',this,'mes3-subnav')"><span class="sec-label">Instagram</span><span class="sec-desc">Seguidores, reels y leads</span></button>
+  <button class="sec-btn" onclick="showSection('s3-facebook',this,'mes3-subnav')"><span class="sec-label">Facebook</span><span class="sec-desc">Reacciones y visualizaciones</span></button>
+  <button class="sec-btn" onclick="showSection('s3-linkedin',this,'mes3-subnav')"><span class="sec-label">LinkedIn</span><span class="sec-desc">Audiencia profesional</span></button>
+  <button class="sec-btn" onclick="showSection('s3-ads',this,'mes3-subnav')"><span class="sec-label">Meta Ads</span><span class="sec-desc">Pauta de mayo</span></button>
+  <button class="sec-btn" onclick="showSection('s3-leads',this,'mes3-subnav')"><span class="sec-label">Leads</span><span class="sec-desc">25 leads captados</span></button>
+  <button class="sec-btn" onclick="showSection('s3-bench',this,'mes3-subnav')"><span class="sec-label">Competencia</span><span class="sec-desc">Benchmark mayo</span></button>
+  <button class="sec-btn" onclick="showSection('s3-vs',this,'mes3-subnav')"><span class="sec-label">Evolución</span><span class="sec-desc">Mes 2 vs Mes 3</span></button>
+</div>
+
 <!-- ===================== HOME ===================== -->
 <div class="page active" id="page-home">
-  <div class="month-badge">Meses 1 y 2 activos · Enero–Mayo 2026</div>
+  <div class="month-badge tri">Trimestre 1 completo · Marzo–Mayo 2026</div>
   <div class="section-title">Panel de Resultados — MI Global</div>
-  <div class="section-sub">Acumulado: Marzo–Abril 2026 · Gestión estratégica Mucho POP</div>
+  <div class="section-sub">Acumulado: Marzo–Mayo 2026 · Gestión estratégica Mucho POP</div>
 
   <div class="win-box">
-    <div class="win-title">Resumen ejecutivo — 2 meses de gestión</div>
-    <div class="win-text">En dos meses de implementación, MI Global ha alcanzado a más de 195.000 personas únicas en redes, acumulado 54 leads calificados (meta: 20 en total · 10/mes), obtenido 2 reseñas de 5 estrellas en Google, y crecido su comunidad digital de 1.013 a 1.770 seguidores totales entre las 3 plataformas. LinkedIn creció un 77.91% en el mes 2 y los reels continúan siendo el formato más efectivo del ecosistema.</div>
+    <div class="win-title">Resumen ejecutivo — primer trimestre</div>
+    <div class="win-text">En tres meses de implementación, MI Global acumuló 79 leads calificados frente a una meta trimestral de 30, alcanzó 2.118 seguidores totales entre Instagram, Facebook y LinkedIn, y cerró mayo con una señal comercial positiva: aunque las visualizaciones bajaron frente al pico extraordinario de abril, la comunidad creció con fuerza y los leads subieron de 23 a 25. El trimestre confirma que el contenido no solo está generando visibilidad, sino también intención de contacto.</div>
   </div>
 
   <div class="three-col">
-    <div class="card" style="border-top:3px solid var(--mp-purple)">
-      <div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Mes 1 — Marzo</div>
-      <div style="font-size:0.8rem;color:var(--text2);line-height:1.9">
-        Alcance IG: <strong>92.7K</strong><br>
-        Engagement: <strong>36.96%</strong><br>
-        Leads: <strong>31</strong><br>
-        Seguidores total: <strong>1.509</strong><br>
-        Google: <strong>1 reseña 5★</strong>
-      </div>
-    </div>
-    <div class="card" style="border-top:3px solid var(--mp-pink)">
-      <div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Mes 2 — Abril</div>
-      <div style="font-size:0.8rem;color:var(--text2);line-height:1.9">
-        Visualizaciones IG: <strong>231.6K</strong><br>
-        Engagement: <strong>35.28%</strong><br>
-        Leads: <strong>23</strong><br>
-        Seguidores total: <strong>1.770</strong><br>
-        Google: <strong>2da reseña 5★</strong>
-      </div>
-    </div>
-    <div class="card" style="border-top:3px solid var(--success)">
-      <div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Acumulado 2 meses</div>
-      <div style="font-size:0.8rem;color:var(--text2);line-height:1.9">
-        Alcance total: <strong>~195K+ únicos</strong><br>
-        Leads acumulados: <strong>54</strong><br>
-        Crecimiento seg.: <strong>+74.7%</strong><br>
-        Reseñas Google: <strong>2 × 5★</strong><br>
-        LinkedIn: <strong>306 seg. (+77.91%)</strong>
-      </div>
-    </div>
+    <div class="card" style="border-top:3px solid var(--mp-purple)"><div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Mes 1 — Marzo</div><div style="font-size:0.8rem;color:var(--text2);line-height:1.9">Reproducciones video: <strong>117.2K</strong><br>Engagement IG: <strong>36.96%</strong><br>Leads: <strong>31</strong><br>Seguidores total: <strong>1.509</strong><br>Google: <strong>1 reseña 5★</strong></div></div>
+    <div class="card" style="border-top:3px solid var(--mp-pink)"><div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Mes 2 — Abril</div><div style="font-size:0.8rem;color:var(--text2);line-height:1.9">Visualizaciones IG: <strong>231.6K</strong><br>Engagement IG: <strong>35.28%</strong><br>Leads: <strong>23</strong><br>Seguidores total: <strong>1.770</strong><br>Google: <strong>2da reseña 5★</strong></div></div>
+    <div class="card" style="border-top:3px solid var(--success)"><div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:0.5rem">Mes 3 — Mayo</div><div style="font-size:0.8rem;color:var(--text2);line-height:1.9">Visualizaciones IG: <strong>14.89K</strong><br>Seguidores IG: <strong>1.602 (+378)</strong><br>Leads: <strong>25</strong><br>Seguidores total: <strong>2.118</strong><br>Meta Ads CTR: <strong>0.41%</strong></div></div>
   </div>
 
   <div class="two-col">
     <div class="card">
-      <div class="card-title">Progreso de Objetivos — Acumulado Mes 2</div>
-      <div class="obj-card" style="background:var(--success-bg);border-color:#9FE1CB">
-        <div class="obj-header"><div class="obj-name">Leads calificados (Obj. 3 y 9)</div><span class="obj-badge badge-green">CUMPLIDO × 2 meses</span></div>
-        <div class="progress-bar"><div class="progress-fill exceeded" style="width:100%"></div></div>
-        <div class="obj-detail">Mar: 31 leads · Abr: 23 leads · Total acumulado: 54 · Meta total: 20 → ampliamente superada</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-header"><div class="obj-name">Comunidad digital (Obj. 7)</div><span class="obj-badge badge-blue">+74.7% en 2 meses</span></div>
-        <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
-        <div class="obj-detail">1.013 → 1.770 seguidores totales · Meta anual: +60% · Ya superado el 60% del objetivo en mes 2</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-header"><div class="obj-name">Reputación digital (Obj. 5)</div><span class="obj-badge badge-blue">En progreso</span></div>
-        <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
-        <div class="obj-detail">2 reseñas de 5★ en Google · Meta: 5 testimonios verificables · 40% completado</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-header"><div class="obj-name">Engagement rate (Obj. 4)</div><span class="obj-badge badge-green">SOSTENIDO</span></div>
-        <div class="progress-bar"><div class="progress-fill success" style="width:100%"></div></div>
-        <div class="obj-detail">Mes 1: 36.96% · Mes 2: 35.28% · Ambos meses muy por encima del objetivo mínimo del 6%</div>
-      </div>
+      <div class="card-title">Progreso de Objetivos — Acumulado trimestre</div>
+      <div class="obj-card" style="background:var(--success-bg);border-color:#9FE1CB"><div class="obj-header"><div class="obj-name">Leads calificados (Obj. 3 y 9)</div><span class="obj-badge badge-green">CUMPLIDO × 3 meses</span></div><div class="progress-bar"><div class="progress-fill exceeded" style="width:100%"></div></div><div class="obj-detail">Mar: 31 · Abr: 23 · May: 25 · Total: 79 · Meta trimestral: 30 → 263% de cumplimiento</div></div>
+      <div class="obj-card" style="background:var(--success-bg);border-color:#9FE1CB"><div class="obj-header"><div class="obj-name">Comunidad digital (Obj. 7)</div><span class="obj-badge badge-green">+109% vs. base</span></div><div class="progress-bar"><div class="progress-fill success" style="width:100%"></div></div><div class="obj-detail">1.013 → 2.118 seguidores totales · Meta anual +60% superada durante el primer trimestre</div></div>
+      <div class="obj-card"><div class="obj-header"><div class="obj-name">Reputación digital (Obj. 5)</div><span class="obj-badge badge-blue">40% completado</span></div><div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div><div class="obj-detail">2 reseñas de 5★ en Google · Meta: 5 testimonios verificables</div></div>
+      <div class="obj-card"><div class="obj-header"><div class="obj-name">Lectura de visualizaciones</div><span class="obj-badge badge-blue">Normalización positiva</span></div><div class="progress-bar"><div class="progress-fill" style="width:70%"></div></div><div class="obj-detail">Abril fue un pico excepcional de distribución. Mayo baja en visualizaciones, pero convierte mejor en comunidad y leads: más seguidores y más contactos que abril.</div></div>
     </div>
-
-    <div class="card">
-      <div class="card-title">Tendencia 2 meses — métricas principales</div>
-      <div class="chart-area" style="height:230px"><canvas id="homeChart"></canvas></div>
-      <div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem;text-align:center">Leads mensuales generados vs. meta del plan (10/mes)</div>
-    </div>
+    <div class="card"><div class="card-title">Tendencia 3 meses — leads generados</div><div class="chart-area" style="height:230px"><canvas id="homeChart"></canvas></div><div style="font-size:0.72rem;color:var(--text3);margin-top:0.5rem;text-align:center">Leads mensuales vs. meta del plan (10/mes)</div></div>
   </div>
 
   <div class="card">
-    <div class="card-title">Competencia — Benchmark actualizado · Abril 2026</div>
-    <div class="bench-row" style="background:var(--mp-purple-bg);border-radius:10px;padding:0.6rem 1rem;margin-bottom:0.25rem">
-      <div class="bench-brand brand-mi">MI Global</div>
-      <div class="bench-stat"><div class="bench-stat-val brand-mi">1.224</div><div class="bench-stat-label">Seg. IG</div></div>
-      <div class="bench-stat bench-winner"><div class="bench-stat-val">35.28%</div><div class="bench-stat-label">Engagement</div></div>
-      <div class="bench-stat bench-winner"><div class="bench-stat-val">231K</div><div class="bench-stat-label">Visualizaciones</div></div>
-      <div class="bench-stat bench-winner"><div class="bench-stat-val">23</div><div class="bench-stat-label">Leads/mes</div></div>
-    </div>
-    <div class="bench-row">
-      <div class="bench-brand">JJ Marí</div>
-      <div class="bench-stat"><div class="bench-stat-val">8.403</div><div class="bench-stat-label">Seg. IG</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">Alto</div><div class="bench-stat-label">Engagement</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">N/D</div><div class="bench-stat-label">Visualizaciones</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">N/D</div><div class="bench-stat-label">Leads</div></div>
-    </div>
-    <div class="bench-row">
-      <div class="bench-brand">Clover</div>
-      <div class="bench-stat"><div class="bench-stat-val">6.937</div><div class="bench-stat-label">Seg. IG</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">Menor</div><div class="bench-stat-label">Engagement</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">N/D</div><div class="bench-stat-label">Visualizaciones</div></div>
-      <div class="bench-stat"><div class="bench-stat-val">N/D</div><div class="bench-stat-label">Leads</div></div>
-    </div>
+    <div class="card-title">Competencia — Benchmark actualizado · Mayo 2026</div>
+    <div class="bench-row" style="background:var(--mp-purple-bg);border-radius:10px;padding:0.6rem 1rem;margin-bottom:0.25rem"><div class="bench-brand brand-mi">MI Global</div><div class="bench-stat"><div class="bench-stat-val brand-mi">1.602</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat bench-winner"><div class="bench-stat-val">25</div><div class="bench-stat-label">Leads/mes</div></div><div class="bench-stat bench-winner"><div class="bench-stat-val">+378</div><div class="bench-stat-label">Netos IG</div></div><div class="bench-stat"><div class="bench-stat-val">14.89K</div><div class="bench-stat-label">Visualizaciones IG</div></div></div>
+    <div class="bench-row"><div class="bench-brand">JJ Marí</div><div class="bench-stat"><div class="bench-stat-val">8.545</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat"><div class="bench-stat-val">0.39%</div><div class="bench-stat-label">Engagement</div></div><div class="bench-stat"><div class="bench-stat-val">6 posts</div><div class="bench-stat-label">Posts</div></div><div class="bench-stat"><div class="bench-stat-val">7 reels</div><div class="bench-stat-label">Reels</div></div></div>
+    <div class="bench-row"><div class="bench-brand">Clover</div><div class="bench-stat"><div class="bench-stat-val">6.951</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat"><div class="bench-stat-val">0.12%</div><div class="bench-stat-label">Engagement</div></div><div class="bench-stat"><div class="bench-stat-val">5 posts</div><div class="bench-stat-label">Posts</div></div><div class="bench-stat"><div class="bench-stat-val">N/D</div><div class="bench-stat-label">Reels</div></div></div>
   </div>
 </div>
 
@@ -735,22 +687,97 @@ table{border-collapse:collapse}
 
 </div><!-- end mes2 -->
 
+<!-- ===================== MES 3 ===================== -->
+<div class="page" id="page-mes3">
+  <div class="section active" id="s3-overview">
+    <div class="month-badge mes3">Mes 3 — Mayo 2026</div><div class="section-title">Análisis Completo — Tercer Mes</div><div class="section-sub">02 de mayo al 05 de junio de 2026 · Fase 1: Fundamentos y Construcción de Confianza</div>
+    <div class="win-box"><div class="win-title">Lectura estratégica positiva</div><div class="win-text">Mayo muestra una normalización de visualizaciones después del pico extraordinario de abril, pero el dato comercial es mejor: MI Global creció más en comunidad y generó más leads que el mes anterior. Instagram sumó 378 seguidores netos y el mes cerró con 25 leads, superando los 23 de abril y manteniendo el desempeño por encima de la meta mensual de 10.</div></div>
+    <div class="kpi-grid">
+      <div class="kpi-card success-card"><div class="kpi-label">Leads generados</div><div class="kpi-value">25</div><div class="kpi-change up">+8.7% vs. abril</div></div>
+      <div class="kpi-card success-card"><div class="kpi-label">Seguidores IG</div><div class="kpi-value">1.602</div><div class="kpi-change up">+378 netos (+30.88%)</div></div>
+      <div class="kpi-card highlight"><div class="kpi-label">Seguidores totales</div><div class="kpi-value">2.118</div><div class="kpi-change fire">+19.66% total</div></div>
+      <div class="kpi-card"><div class="kpi-label">Visualizaciones IG</div><div class="kpi-value">14.89K</div><div class="kpi-change neutral">menor que abril, con mejor conversión</div></div>
+      <div class="kpi-card"><div class="kpi-label">Interacciones globales</div><div class="kpi-value">292</div><div class="kpi-change neutral">220 en Instagram</div></div>
+      <div class="kpi-card success-card"><div class="kpi-label">Meta Ads CTR</div><div class="kpi-value">0.41%</div><div class="kpi-change up">+74.14% vs. abril</div></div>
+      <div class="kpi-card"><div class="kpi-label">Impresiones globales</div><div class="kpi-value">54.98K</div><div class="kpi-change neutral">fin del pico de alcance</div></div>
+      <div class="kpi-card"><div class="kpi-label">Contenido publicado</div><div class="kpi-value">40</div><div class="kpi-change neutral">FB 18 · IG 21 · LI 1</div></div>
+    </div>
+    <div class="kpi-explain-grid">
+      <div class="kpi-explain-card success-top"><div class="kpi-explain-name">Leads Calificados</div><div class="kpi-explain-val">25 / mes</div><div class="kpi-explain-desc">Mayo supera abril: 10 leads por link de WhatsApp en el perfil de Instagram, 12 por mensaje directo de Instagram y 3 por mensajes en cuenta. La captación se mantiene por encima de la meta.</div></div>
+      <div class="kpi-explain-card success-top"><div class="kpi-explain-name">Crecimiento seguidores</div><div class="kpi-explain-val">+378 IG</div><div class="kpi-explain-desc">Instagram pasó de 1.224 a 1.602 seguidores. Este es el crecimiento neto más fuerte del trimestre y confirma que la marca está construyendo comunidad, no solo alcance temporal.</div></div>
+      <div class="kpi-explain-card"><div class="kpi-explain-name">Visualizaciones</div><div class="kpi-explain-val">14.89K IG</div><div class="kpi-explain-desc">La baja frente a abril debe leerse como normalización después de un mes excepcional. Lo importante: el volumen menor vino acompañado de más seguidores y más leads.</div></div>
+      <div class="kpi-explain-card pink-top"><div class="kpi-explain-name">Pauta digital</div><div class="kpi-explain-val">0.41% CTR</div><div class="kpi-explain-desc">Meta Ads mejoró la tasa de clics frente a abril. Aunque hubo menos impresiones, la pauta compró una audiencia con mayor intención de acción.</div></div>
+    </div>
+  </div>
+
+  <div class="section" id="s3-objetivos">
+    <div class="section-title">Objetivos SMART — Estado acumulado Mes 3</div><div class="section-sub">Progreso del Plan de Marketing · Cierre del primer trimestre operativo</div>
+    <div class="win-box"><div class="win-title">Trimestre con metas comerciales superadas</div><div class="win-text">El acumulado de 79 leads representa 263% de cumplimiento frente a la meta trimestral de 30. La comunidad total llegó a 2.118 seguidores, más del doble de la base inicial reportada al inicio del plan. Mayo confirma que la estrategia no depende únicamente de picos de viralidad: incluso con menos visualizaciones, el sistema siguió captando contactos.</div></div>
+    <div class="obj-card" style="background:var(--success-bg);border-color:#9FE1CB"><div class="obj-header"><div><div class="obj-name">Obj. 3 y 9 — Leads calificados 10/mes</div></div><span class="obj-badge badge-green">✓ 263% trimestre</span></div><div class="progress-bar"><div class="progress-fill success" style="width:100%"></div></div><div class="obj-detail">Marzo: 31 · Abril: 23 · Mayo: 25 · Total: 79 · Promedio mensual: 26.3 leads</div></div>
+    <div class="obj-card" style="background:var(--success-bg);border-color:#9FE1CB"><div class="obj-header"><div><div class="obj-name">Obj. 7 — Comunidad Digital +60% anual</div></div><span class="obj-badge badge-green">✓ Superado</span></div><div class="progress-bar"><div class="progress-fill exceeded" style="width:100%"></div></div><div class="obj-detail">Base inicial: 1.013 · Cierre mayo: 2.118 · Crecimiento: +109% en el primer trimestre</div></div>
+    <div class="obj-card"><div class="obj-header"><div><div class="obj-name">Obj. 1 — Posicionamiento de Marca</div></div><span class="obj-badge badge-blue">En curso sólido</span></div><div class="progress-bar"><div class="progress-fill" style="width:35%"></div></div><div class="obj-detail">Tres plataformas activas · comunidad en expansión · pauta con alcance acumulado y contenidos de alta intención comercial.</div></div>
+    <div class="obj-card"><div class="obj-header"><div><div class="obj-name">Obj. 8 — Ecosistema Digital Integrado</div></div><span class="obj-badge badge-yellow">Prioridad siguiente</span></div><div class="progress-bar"><div class="progress-fill warn" style="width:30%"></div></div><div class="obj-detail">Instagram + WhatsApp ya convierten. La web y la trazabilidad completa siguen siendo el siguiente paso para medir cierres con mayor precisión.</div></div>
+  </div>
+
+  <div class="section" id="s3-instagram">
+    <div class="section-title">Instagram — @miglobalvzla · Mes 3</div><div class="section-sub">Canal principal · Mayo 2026</div>
+    <div class="insight-box"><div class="insight-title">Más comunidad, más intención</div><div class="insight-text">Instagram cerró mayo con 1.602 seguidores, un balance neto de +378. Aunque las visualizaciones bajaron a 14.89K, el canal generó más leads que abril y mantuvo actividad relevante en posts, reels e historias. La lectura clave: mayo transformó menor alcance en mayor crecimiento de comunidad.</div></div>
+    <div class="kpi-grid"><div class="kpi-card success-card"><div class="kpi-label">Seguidores</div><div class="kpi-value">1.602</div><div class="kpi-change up">+378 netos</div></div><div class="kpi-card"><div class="kpi-label">Visualizaciones</div><div class="kpi-value">14.89K</div><div class="kpi-change neutral">normalización vs. abril</div></div><div class="kpi-card success-card"><div class="kpi-label">Leads desde IG/WA</div><div class="kpi-value">25</div><div class="kpi-change up">+2 vs. abril</div></div><div class="kpi-card"><div class="kpi-label">Interacciones IG</div><div class="kpi-value">220</div><div class="kpi-change neutral">84 posts · 136 reels</div></div></div>
+    <div class="two-col">
+      <div class="card"><div class="card-title">Posts estáticos — Mes 3</div><div class="post-item"><div class="post-rank">1</div><div class="post-info"><div class="post-text">“¿Cuánto cuesta una mudanza internacional?”</div><div class="post-stats"><span class="post-stat">186 vis.</span><span class="post-stat">20 likes</span><span class="post-stat">Engagement: 27.16%</span></div></div></div><div class="post-item"><div class="post-rank">2</div><div class="post-info"><div class="post-text">“Mudarte a otro país implica mucho más que empacar cajas”</div><div class="post-stats"><span class="post-stat">182 vis.</span><span class="post-stat">17 likes</span><span class="post-stat">Engagement: 22.62%</span></div></div></div><div class="post-item"><div class="post-rank">3</div><div class="post-info"><div class="post-text">“5 datos que nos dejaron los primeros meses del año”</div><div class="post-stats"><span class="post-stat">147 vis.</span><span class="post-stat">11 likes</span><span class="tag tag-green">Q1 insights</span></div></div></div></div>
+      <div class="card"><div class="card-title">Reels — Mes 3</div><div class="post-item"><div class="post-rank">1</div><div class="post-info"><div class="post-text">“¿Cuánto vale lo que no tiene reemplazo?”</div><div class="post-stats"><span class="post-stat">451 vis.</span><span class="post-stat">28 likes</span><span class="post-stat">7 comentarios</span><span class="tag tag-pink">Top reel</span></div></div></div><div class="post-item"><div class="post-rank">2</div><div class="post-info"><div class="post-text">“La mudanza internacional presenta desafíos previos…”</div><div class="post-stats"><span class="post-stat">325 vis.</span><span class="post-stat">17 likes</span><span class="post-stat">3 compartidos</span></div></div></div><div class="post-item"><div class="post-rank">3</div><div class="post-info"><div class="post-text">“¿Listo para tu próxima mudanza?”</div><div class="post-stats"><span class="post-stat">235 vis.</span><span class="post-stat">Engagement: 21.38%</span><span class="tag tag-green">CTA WhatsApp</span></div></div></div></div>
+    </div>
+    <div class="card"><div class="card-title">Demografía — Mayo 2026</div><div class="two-col"><div style="font-size:0.8rem;color:var(--text2);line-height:2">Venezuela: <strong>40.63%</strong><br>Estados Unidos: <strong>14.55%</strong><br>Bangladesh y España: <strong>7.14%</strong> cada uno<br>Brasil, Canadá, Argentina y Colombia completan el top.</div><div style="font-size:0.8rem;color:var(--text2);line-height:2">Caracas: <strong>25.53%</strong><br>Madrid · Bogotá · Tehran · Mérida · São Paulo<br><span style="font-size:0.72rem;color:var(--text3)">Hashtags destacados: #logísticainternacional, #mudanzas, #internationalmoving, #relocation.</span></div></div></div>
+  </div>
+
+  <div class="section" id="s3-facebook"><div class="section-title">Facebook — Mes 3</div><div class="section-sub">Mayo 2026 · Menor volumen, mejores reacciones</div><div class="kpi-grid"><div class="kpi-card"><div class="kpi-label">Visualizaciones</div><div class="kpi-value">29.08K</div><div class="kpi-change neutral">normalización post pico</div></div><div class="kpi-card"><div class="kpi-label">Seguidores</div><div class="kpi-value">242</div><div class="kpi-change up">+0.83%</div></div><div class="kpi-card success-card"><div class="kpi-label">Reacciones</div><div class="kpi-value">73</div><div class="kpi-change up">+160.71%</div></div><div class="kpi-card"><div class="kpi-label">Visitas página</div><div class="kpi-value">102</div><div class="kpi-change neutral">dato de página</div></div></div><div class="win-box"><div class="win-title">Lo positivo del mes</div><div class="win-text">Facebook bajó en visualizaciones frente al pico de abril, pero mejoró en reacción de audiencia: las reacciones crecieron 160.71%. Es una señal de que, con menor volumen, el contenido que sí llegó tuvo mejor respuesta emocional.</div></div></div>
+
+  <div class="section" id="s3-linkedin"><div class="section-title">LinkedIn — Mes 3</div><div class="section-sub">Audiencia profesional · Mayo 2026</div><div class="kpi-grid"><div class="kpi-card"><div class="kpi-label">Seguidores</div><div class="kpi-value">274</div><div class="kpi-change down">-10.46% vs. abril</div></div><div class="kpi-card"><div class="kpi-label">Impresiones</div><div class="kpi-value">101</div><div class="kpi-change neutral">1 publicación</div></div><div class="kpi-card success-card"><div class="kpi-label">Clics</div><div class="kpi-value">72</div><div class="kpi-change up">+188%</div></div><div class="kpi-card success-card"><div class="kpi-label">Engagement post</div><div class="kpi-value">138</div><div class="kpi-change up">+2930%</div></div></div><div class="insight-box"><div class="insight-title">Audiencia B2B de alto valor</div><div class="insight-text">LinkedIn tuvo menos volumen y menos publicaciones, pero el único contenido del mes generó 69 interacciones y 72 clics. La audiencia sigue siendo estratégicamente relevante: manufactura, servicios profesionales, logística, tecnología, ingeniería, IT y operaciones.</div></div></div>
+
+  <div class="section" id="s3-ads">
+    <div class="section-title">Meta Ads — Publicidad digital · Mes 3</div><div class="section-sub">02 de mayo al 05 de junio de 2026 · Campañas en Facebook e Instagram</div>
+    <div class="insight-box"><div class="insight-title">Menos volumen, mejor intención de clic</div><div class="insight-text">La pauta de mayo redujo impresiones y alcance frente a abril, pero mejoró el CTR en 74.14%. Esto acompaña la lectura general del mes: menor exposición masiva, pero mejor capacidad para convertir atención en acción.</div></div>
+    <div class="kpi-grid"><div class="kpi-card highlight"><div class="kpi-label">Impresiones</div><div class="kpi-value">127.78K</div><div class="kpi-change neutral">-50.62%</div></div><div class="kpi-card highlight"><div class="kpi-label">Alcance</div><div class="kpi-value">104.13K</div><div class="kpi-change neutral">-50.96%</div></div><div class="kpi-card"><div class="kpi-label">Clics</div><div class="kpi-value">528</div><div class="kpi-change neutral">-14.01%</div></div><div class="kpi-card success-card"><div class="kpi-label">CTR</div><div class="kpi-value">0.41%</div><div class="kpi-change up">+74.14%</div></div><div class="kpi-card"><div class="kpi-label">CPM</div><div class="kpi-value">$0.50</div><div class="kpi-change neutral">+152.71%</div></div><div class="kpi-card"><div class="kpi-label">CPC</div><div class="kpi-value">$0.12</div><div class="kpi-change neutral">+45.12%</div></div></div>
+    <div class="card"><div class="card-title">Rendimiento por campaña</div><div style="overflow-x:auto"><table style="width:100%;font-size:0.78rem"><thead><tr style="border-bottom:2px solid var(--border)"><th style="text-align:left;padding:8px;color:var(--text3);font-weight:600">Campaña</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">Tipo</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">Impresiones</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">Alcance</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">Clics</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">CTR</th><th style="text-align:center;padding:8px;color:var(--text3);font-weight:600">Gasto</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border)"><td style="padding:8px;font-weight:500">Avila $5</td><td style="text-align:center;padding:8px"><span class="tag tag-purple">Awareness</span></td><td style="text-align:center;padding:8px">84.65K</td><td style="text-align:center;padding:8px">69.7K</td><td style="text-align:center;padding:8px">61</td><td style="text-align:center;padding:8px">0.07%</td><td style="text-align:center;padding:8px">$7.82</td></tr><tr style="border-bottom:1px solid var(--border)"><td style="padding:8px;font-weight:500">Global Mayo</td><td style="text-align:center;padding:8px"><span class="tag tag-green">Engagement</span></td><td style="text-align:center;padding:8px">32.28K</td><td style="text-align:center;padding:8px">26.52K</td><td style="text-align:center;padding:8px">161</td><td style="text-align:center;padding:8px">0.50%</td><td style="text-align:center;padding:8px">$14.91</td></tr><tr style="background:var(--success-bg)"><td style="padding:8px;font-weight:700;color:#085041">Zenaida</td><td style="text-align:center;padding:8px"><span class="tag tag-green">Conversación</span></td><td style="text-align:center;padding:8px;color:#085041">9.31K</td><td style="text-align:center;padding:8px;color:#085041">7.40K</td><td style="text-align:center;padding:8px;color:#085041;font-weight:700">185</td><td style="text-align:center;padding:8px;color:#085041;font-weight:700">1.99%</td><td style="text-align:center;padding:8px;color:#085041">$26.43</td></tr><tr><td style="padding:8px;font-weight:500">Tráfico Avila Campaña</td><td style="text-align:center;padding:8px"><span class="tag tag-pink">Tráfico</span></td><td style="text-align:center;padding:8px">1.14K</td><td style="text-align:center;padding:8px">1.29K</td><td style="text-align:center;padding:8px">87</td><td style="text-align:center;padding:8px">7.66%</td><td style="text-align:center;padding:8px">$11.16</td></tr></tbody></table></div></div>
+  </div>
+
+  <div class="section" id="s3-leads"><div class="section-title">Leads — Mes 3</div><div class="section-sub">25 leads generados · Mayo 2026</div><div class="win-box"><div class="win-title">Mayo supera abril en captación</div><div class="win-text">El mes 3 generó 25 leads, 2 más que abril. La mayor parte vino de Instagram y WhatsApp, confirmando que el canal social ya funciona como punto de entrada comercial aunque todavía falte una trazabilidad completa de cierres.</div></div><div class="leads-flow"><div class="lead-source"><span class="lead-source-num">10</span><div class="lead-source-label">Link WhatsApp en perfil IG</div></div><div class="lead-source"><span class="lead-source-num">12</span><div class="lead-source-label">Mensaje directo Instagram</div></div><div class="lead-source"><span class="lead-source-num">3</span><div class="lead-source-label">Mensajes en cuenta</div></div></div><div class="kpi-grid"><div class="kpi-card success-card"><div class="kpi-label">Total leads mes 3</div><div class="kpi-value">25</div><div class="kpi-change up">+8.7% vs. abril</div></div><div class="kpi-card highlight"><div class="kpi-label">Acumulado trimestre</div><div class="kpi-value">79</div><div class="kpi-change up">Meta 30 → 263%</div></div><div class="kpi-card"><div class="kpi-label">Canal dominante</div><div class="kpi-value">IG+WA</div><div class="kpi-change neutral">88% vía IG/WA directo</div></div></div></div>
+
+  <div class="section" id="s3-bench"><div class="section-title">Competencia — Benchmark · Mes 3</div><div class="section-sub">Comparativa actualizada · Mayo 2026</div><div class="card"><div class="bench-row" style="background:var(--mp-purple-bg);border-radius:10px;padding:0.6rem 1rem;margin-bottom:0.25rem"><div class="bench-brand brand-mi">MI Global</div><div class="bench-stat"><div class="bench-stat-val brand-mi">1.602</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat bench-winner"><div class="bench-stat-val">25</div><div class="bench-stat-label">Leads</div></div><div class="bench-stat bench-winner"><div class="bench-stat-val">+378</div><div class="bench-stat-label">Netos IG</div></div></div><div class="bench-row"><div class="bench-brand">JJ Marí</div><div class="bench-stat"><div class="bench-stat-val">8.545</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat"><div class="bench-stat-val">0.39%</div><div class="bench-stat-label">Engagement</div></div><div class="bench-stat"><div class="bench-stat-val">13</div><div class="bench-stat-label">Posts+reels</div></div></div><div class="bench-row"><div class="bench-brand">Clover</div><div class="bench-stat"><div class="bench-stat-val">6.951</div><div class="bench-stat-label">Seg. IG</div></div><div class="bench-stat"><div class="bench-stat-val">0.12%</div><div class="bench-stat-label">Engagement</div></div><div class="bench-stat"><div class="bench-stat-val">5</div><div class="bench-stat-label">Posts</div></div></div><div style="font-size:0.75rem;color:var(--text3);margin-top:0.75rem;padding:0.5rem;background:var(--bg2);border-radius:8px">JJ Marí y Clover mantienen bases de seguidores mayores, pero MI Global mostró una señal diferencial en mayo: crecimiento neto fuerte en Instagram y 25 leads medibles.</div></div></div>
+
+  <div class="section" id="s3-vs"><div class="section-title">Mes 2 vs. Mes 3 — Comparativa de evolución</div><div class="section-sub">Abril vs. Mayo 2026 · Lectura positiva del cambio</div><div class="two-col"><div class="card"><div class="card-title">Lo que mejoró en mayo</div><div style="font-size:0.82rem;color:var(--text2);line-height:2.1">✓ Seguidores IG: 1.224 → <strong>1.602 (+378)</strong><br>✓ Leads: 23 → <strong>25 (+8.7%)</strong><br>✓ Seguidores totales: 1.770 → <strong>2.118 (+19.66%)</strong><br>✓ Meta Ads CTR: 0.24% → <strong>0.41% (+74.14%)</strong><br>✓ Facebook reacciones: <strong>+160.71%</strong><br>✓ LinkedIn clics: <strong>+188%</strong></div></div><div class="card"><div class="card-title">Lo que se normalizó</div><div style="font-size:0.82rem;color:var(--text2);line-height:2.1">Visualizaciones IG: 231.6K → <strong>14.89K</strong><br>Impresiones globales: 304.1K → <strong>54.98K</strong><br>Meta Ads alcance: 212.3K → <strong>104.13K</strong><br><br><strong>Lectura:</strong> abril fue un pico de alcance. Mayo tuvo menos volumen, pero mejor respuesta comercial: más seguidores y más leads.</div></div></div><div class="win-box"><div class="win-title">Interpretación estratégica</div><div class="win-text">El mes 3 demuestra madurez del embudo social: no se necesita repetir un pico de visualizaciones para generar crecimiento. La marca sumó comunidad y contactos calificados, que son indicadores más cercanos al negocio. La recomendación es mantener contenidos con CTA claro a WhatsApp y reforzar pauta hacia campañas de conversación y tráfico de alta intención.</div></div></div>
+</div><!-- end mes3 -->
+
+<!-- ===================== PRIMER TRIMESTRE ===================== -->
+<div class="page" id="page-trimestre1">
+  <div class="month-badge tri">Primer Trimestre — Marzo a Mayo 2026</div><div class="section-title">Análisis del Primer Trimestre</div><div class="section-sub">Balance estratégico de los primeros 3 meses del plan de marketing digital</div>
+  <div class="win-box"><div class="win-title">Conclusión ejecutiva</div><div class="win-text">El primer trimestre fue exitoso porque convirtió una presencia digital inicial en un sistema de captación activo. En 3 meses se generaron 79 leads, se duplicó la comunidad digital total y se validó Instagram + WhatsApp como el canal comercial más importante. Abril aportó el pico de visibilidad; mayo confirmó que, incluso con menos visualizaciones, la marca puede crecer en seguidores y contactos.</div></div>
+  <div class="kpi-grid"><div class="kpi-card success-card"><div class="kpi-label">Leads acumulados</div><div class="kpi-value">79</div><div class="kpi-change up">263% de la meta trimestral</div></div><div class="kpi-card highlight"><div class="kpi-label">Seguidores totales</div><div class="kpi-value">2.118</div><div class="kpi-change fire">+109% vs. base inicial</div></div><div class="kpi-card success-card"><div class="kpi-label">Promedio leads/mes</div><div class="kpi-value">26.3</div><div class="kpi-change up">meta mensual: 10</div></div><div class="kpi-card"><div class="kpi-label">Seguidores IG cierre</div><div class="kpi-value">1.602</div><div class="kpi-change up">+499 desde cierre mes 1</div></div><div class="kpi-card"><div class="kpi-label">Reseñas Google</div><div class="kpi-value">2</div><div class="kpi-change neutral">2 reseñas 5★</div></div><div class="kpi-card"><div class="kpi-label">Meta Ads clics M1-M3</div><div class="kpi-value">2.017</div><div class="kpi-change neutral">875 + 614 + 528</div></div></div>
+  <div class="card"><div class="card-title">Evolución trimestral — leads, seguidores e impulso comercial</div><div class="chart-area" style="height:260px"><canvas id="q1Chart"></canvas></div></div>
+  <div class="two-col"><div class="card"><div class="card-title">Fortalezas del trimestre</div><div style="font-size:0.82rem;color:var(--text2);line-height:2.1">✓ 79 leads acumulados frente a meta de 30<br>✓ Instagram + WhatsApp validado como embudo comercial<br>✓ Comunidad total supera 2.100 seguidores<br>✓ Mayo mejora leads aun con menos visualizaciones<br>✓ Meta Ads mantiene volumen de clics y mejora CTR en mayo<br>✓ LinkedIn queda instalado como canal B2B de oportunidad</div></div><div class="card"><div class="card-title">Prioridades para el próximo tramo</div><div style="font-size:0.82rem;color:var(--text2);line-height:2.1">1. Activar trazabilidad completa de web, WhatsApp y cierres<br>2. Mantener CTA directo a WhatsApp en reels y posts<br>3. Reforzar campañas de conversación y tráfico calificado<br>4. Usar contenido educativo de costos, aduana y destinos<br>5. Captar 3 reseñas adicionales para completar la meta Google</div></div></div>
+  <div class="insight-box"><div class="insight-title">Lectura final</div><div class="insight-text">El trimestre deja una señal especialmente buena: MI Global no solo ganó exposición, ganó capacidad de atraer personas interesadas. La baja de visualizaciones en mayo no debilita el resultado; al contrario, muestra que el embudo está empezando a depender más de intención y comunidad que de alcance masivo. Ese es un avance importante para una marca de servicios donde el objetivo final es confianza y contacto comercial.</div></div>
+</div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 var charts={};
 function showPage(id,el){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
-  document.getElementById('page-'+id).classList.add('active');
+  var page=document.getElementById('page-'+id);
+  if(page) page.classList.add('active');
   document.querySelectorAll('.nav-item').forEach(function(n){n.classList.remove('active')});
   if(el) el.classList.add('active');
   document.querySelectorAll('.sub-nav').forEach(function(s){s.classList.remove('visible')});
   if(id==='mes1') document.getElementById('mes1-subnav').classList.add('visible');
   if(id==='mes2') document.getElementById('mes2-subnav').classList.add('visible');
+  if(id==='mes3') document.getElementById('mes3-subnav').classList.add('visible');
   window.scrollTo(0,0);
   setTimeout(initCharts,200);
 }
 function showSection(id,el,navId){
-  var pageId = navId==='mes2-subnav' ? 'page-mes2' : 'page-mes1';
+  var pageMap={'mes1-subnav':'page-mes1','mes2-subnav':'page-mes2','mes3-subnav':'page-mes3'};
+  var pageId = pageMap[navId] || 'page-mes1';
   document.querySelectorAll('#'+pageId+' .section').forEach(function(s){s.classList.remove('active')});
   var t=document.getElementById(id);
   if(t) t.classList.add('active');
@@ -763,11 +790,15 @@ function initCharts(){
   if(!window.Chart) return;
   if(!charts.home){
     var c=document.getElementById('homeChart');
-    if(c) charts.home=new Chart(c,{type:'bar',data:{labels:['Mes 1 — Marzo','Mes 2 — Abril'],datasets:[{label:'Leads generados',data:[31,23],backgroundColor:['#6C47D4','#E8319A'],borderRadius:8,borderWidth:0},{label:'Meta mensual',data:[10,10],type:'line',borderColor:'#1D9E75',borderDash:[5,5],borderWidth:2,pointBackgroundColor:'#1D9E75',fill:false,tension:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},scales:{y:{beginAtZero:true,max:40,grid:{color:'rgba(0,0,0,0.05)'},ticks:{stepSize:5}},x:{grid:{display:false}}}}});
+    if(c) charts.home=new Chart(c,{type:'bar',data:{labels:['Mes 1 — Marzo','Mes 2 — Abril','Mes 3 — Mayo'],datasets:[{label:'Leads generados',data:[31,23,25],backgroundColor:['#6C47D4','#E8319A','#1D9E75'],borderRadius:8,borderWidth:0},{label:'Meta mensual',data:[10,10,10],type:'line',borderColor:'#1D9E75',borderDash:[5,5],borderWidth:2,pointBackgroundColor:'#1D9E75',fill:false,tension:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},scales:{y:{beginAtZero:true,max:40,grid:{color:'rgba(0,0,0,0.05)'},ticks:{stepSize:5}},x:{grid:{display:false}}}}});
   }
   if(!charts.vs){
     var c=document.getElementById('vsChart');
-    if(c) charts.vs=new Chart(c,{type:'bar',data:{labels:['Seguidores IG','Leads','Netos mes'],datasets:[{label:'Mes 1 — Marzo',data:[1103,31,89],backgroundColor:'rgba(108,71,212,0.7)',borderRadius:6,borderWidth:0},{label:'Mes 2 — Abril',data:[1224,23,121],backgroundColor:'rgba(232,49,154,0.7)',borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},scales:{y:{beginAtZero:true,grid:{color:'rgba(0,0,0,0.05)'}},x:{grid:{display:false}}}}});
+    if(c) charts.vs=new Chart(c,{type:'bar',data:{labels:['Seguidores IG','Leads','Netos mes'],datasets:[{label:'Mes 1 — Marzo',data:[1103,31,89],backgroundColor:'rgba(108,71,212,0.7)',borderRadius:6,borderWidth:0},{label:'Mes 2 — Abril',data:[1224,23,121],backgroundColor:'rgba(232,49,154,0.7)',borderRadius:6,borderWidth:0},{label:'Mes 3 — Mayo',data:[1602,25,378],backgroundColor:'rgba(29,158,117,0.7)',borderRadius:6,borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},scales:{y:{beginAtZero:true,grid:{color:'rgba(0,0,0,0.05)'}},x:{grid:{display:false}}}}});
+  }
+  if(!charts.q1){
+    var c=document.getElementById('q1Chart');
+    if(c) charts.q1=new Chart(c,{type:'bar',data:{labels:['Marzo','Abril','Mayo'],datasets:[{label:'Leads',data:[31,23,25],backgroundColor:'#1D9E75',borderRadius:6,borderWidth:0,yAxisID:'y'},{label:'Seguidores IG',data:[1103,1224,1602],backgroundColor:'rgba(108,71,212,0.45)',borderRadius:6,borderWidth:0,yAxisID:'y1'},{label:'Meta leads',data:[10,10,10],type:'line',borderColor:'#E8319A',borderDash:[5,5],borderWidth:2,pointBackgroundColor:'#E8319A',fill:false,tension:0,yAxisID:'y'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:11}}}},scales:{y:{beginAtZero:true,position:'left',max:40,grid:{color:'rgba(0,0,0,0.05)'}},y1:{beginAtZero:true,position:'right',grid:{drawOnChartArea:false}},x:{grid:{display:false}}}}});
   }
 }
 window.addEventListener('load',function(){setTimeout(initCharts,400)});
